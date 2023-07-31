@@ -1,0 +1,26 @@
+To generate a queue in which elements are arrays, you can use the built-in queue module in Python. Specifically, you can use the Queue class from this module, which allows you to create a queue that holds elements of any data type, including arrays.
+
+
+import queue
+
+array_queue = queue.Queue()
+
+array1 = [1, 2, 3]
+array2 = ['a', 'b', 'c']
+array3 = [True, False]
+
+array_queue.put(array1)
+array_queue.put(array2)
+array_queue.put(array3)
+
+while not array_queue.empty():
+    array = array_queue.get()
+    print(array)
+
+Output:
+
+[1, 2, 3]
+['a', 'b', 'c']
+[True, False]
+
+In this example, we used the queue.Queue() class to create a queue that can hold arrays of any length or data type. We added three arrays to the queue and then retrieved and printed them using a while loop until the queue was empty.
